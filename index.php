@@ -1,3 +1,9 @@
+<?php 
+
+  include 'connection.php';
+
+?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,18 +12,43 @@
   <title>Library</title>
 </head>
 <body>  
-  <table class="table table-striped tabel-hover">
-    <thead>
-      <th>NO</th>
-      <th>ID Buku</th>
+  <div class="container mt-3">
+    <a href="add.php" class="btn btn-primary btn-md mb-3">Tambah Data</a>
+    <table class="table table-striped table-hover table-bordered">
+    <thead class="table-dark">
+      <th>ID</th>
       <th>Nama Buku</th>
-      <th>ISBN</th>
       <th>Penerbit</th>
-      <th>Deskripsi</th>
       <th>Jumlah</th>
+      <th>Deskripsi</th>
       <th>Aksi</th>
     </thead>
+    <?php 
+      $sqlget = "SELECT * FROM buku";
+      $query = mysqli_query($conn, $sqlget);
+      while ($data = mysqli_fetch_array($query)) {
+        echo "
+        <tbody>
+          <tr>
+            <td>$data[id]</td>
+            <td>$data[nama_buku]</td>
+            <td>$data[penerbit]</td>
+            <td>$data[jumlah]</th>
+            <td>$data[deskripsi]</td>
+            <td class='text-center'>
+               <div class='d-flex justify-content-center gap-2'>
+                  <a href='' class='btn btn-sm btn-warning px-3 btn-outline'>Update</a>
+                  <a href='' class='btn btn-sm btn-danger px-3 btn-outline'>Delete</a>
+               </div>
+            </td>
+          </tr>
+        </tbody>";        
+        
+        }
+    ?>
   </table>
+  </div>
+
   
 
 
