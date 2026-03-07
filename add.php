@@ -29,7 +29,7 @@ if(isset($_POST['tambah'])) {
 <body>  
 
 <div class="w-50 mx-auto border border-5 rounded 3 p-3 mt-5">
-    <a href="index.php" class='btn btn-sm btn-warning px-3 btn-outline'>Kembali</a>
+    <a href="index.php" class='btn btn-sm btn-warning px-3 btn-outline mb-3'>Kembali</a>
     <form action="add.php" method="post">
         <label for="name">Nama Buku</label>
         <input type="text" id="name" name="name" class="form-control" required>
