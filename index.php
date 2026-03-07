@@ -37,8 +37,8 @@
             <td>$data[deskripsi]</td>
             <td class='text-center'>
                <div class='d-flex justify-content-center gap-2'>
-                  <a href='' class='btn btn-sm btn-warning px-3 btn-outline'>Update</a>
-                  <a href='delete.php?id={$data['id']}' class='btn btn-sm btn-danger px-3 btn-outline'>Delete</a>
+                  <a href='update.php?id={$data['id']}' class='btn btn-sm btn-warning px-3 btn-outline'>Update</a>
+                  <a href='delete.php?id={$data['id']}' class='btn btn-sm btn-danger px-3 btn-outline '>Delete</a>
                </div>
             </td>
           </tr>
