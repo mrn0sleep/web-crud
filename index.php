@@ -33,12 +33,12 @@
             <td>$data[id]</td>
             <td>$data[nama_buku]</td>
             <td>$data[penerbit]</td>
-            <td>$data[jumlah]</th>
+            <td>$data[jumlah]</td>
             <td>$data[deskripsi]</td>
             <td class='text-center'>
                <div class='d-flex justify-content-center gap-2'>
                   <a href='' class='btn btn-sm btn-warning px-3 btn-outline'>Update</a>
-                  <a href='' class='btn btn-sm btn-danger px-3 btn-outline'>Delete</a>
+                  <a href='delete.php?id={$data['id']}' class='btn btn-sm btn-danger px-3 btn-outline'>Delete</a>
                </div>
             </td>
           </tr>
